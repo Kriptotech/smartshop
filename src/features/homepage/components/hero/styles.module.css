@@ -1,0 +1,82 @@
+.hero {
+    width: 100%;
+    height: 648px;
+    background-image: url(bg_hero.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .content {
+    padding: 0 10%;
+    text-align: center;
+}
+.hero .content h1{
+    font-size: 3.5rem;
+    font-family: 'cursive';
+    color:  var(--white);
+}
+.hero .content a{
+    color:  var(--white);
+    font-size: 1.2rem;
+    padding: 10px 24px;
+    border: 3px solid var(--white);
+    display: inline-flex;
+    text-decoration: none;
+    margin-top: 50px;
+    transition: .5s;
+}
+.hero .content a:hover{
+    background:  var(--secondary);
+}
+
+
+@media (max-width: 1300px){
+    .hero .content h1{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 1150px){
+    .hero .content h1{
+        font-size: 4vw;
+    }
+}
+@media (max-width: 950px){
+    .hero .content h1{
+        font-size: 4.5vw;
+    }
+    .hero .content {
+        padding: 0 5%;
+    }
+}
+@media (max-width: 800px){
+    .hero .content h1{
+        font-size: 5vw;
+    }
+}
+@media (max-width: 700px){
+    .hero .content h1{
+        font-size: 6vw;
+    }
+    .hero {
+        height: 400px;
+    }
+}
+@media (max-width: 550px){
+    .hero .content a{
+        font-size: .9rem;
+        border: 2px solid var(--white);
+    }
+}
+@media (max-width: 350px){
+    .hero .content h1{
+        font-size: 6.7vw;
+    }
+}
+@media (max-width: 280px){
+    .hero .content h1{
+        font-size: 7vw;
+    }
+}

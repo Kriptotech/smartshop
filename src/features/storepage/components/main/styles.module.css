@@ -1,0 +1,54 @@
+.main {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    margin-top: 48px;
+}
+.main .store_banner{
+    width: 100%;
+    height: 260px;
+    position: relative;
+}
+.main .store_banner img:first-child{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.main .store_banner img:last-child{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -50px;
+    left: 30px;
+    border: 2px solid white;
+}
+
+
+
+.main .store_content{
+    color: #666;
+    margin-top: 70px;
+    padding: 0 30px;
+}
+.main .store_content p{
+    margin-bottom: 10px;
+}
+.main .store_content a{
+    display: block;
+    color: var(--violet);
+    margin-bottom: 10px;
+}
+.main .store_content a:hover{
+    display: block;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+.main .store_content p:last-child{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: .9rem;
+    line-height: 20px;
+    text-align: justify;
+}
