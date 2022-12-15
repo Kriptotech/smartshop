@@ -1,7 +1,7 @@
 .hero {
     width: 100%;
     height: 648px;
-    background-image: url(bg_hero.png);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(bg_hero.png);
     background-size: cover;
     background-position: center;
     display: flex;

@@ -24,38 +24,40 @@ export function LoginContainer() {
         }
         
         
-            fetch(`${cookies?.__server}/users/login`, {
-                method: 'POST',
-                body: JSON.stringify(uploadDataObject),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                setMessage(data.message)
+            // fetch(`${cookies?.__server}/users/login`, {
+            //     method: 'POST',
+            //     body: JSON.stringify(uploadDataObject),
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     }
+            // })
+            // .then(res=>res.json())
+            // .then(data=>{
+            //     setMessage(data.message)
 
-                if(data.succes){
-                    //creating user sigla
-                    let i = username.split('')
-                    for (let index = 0; index < i.length; index++) {
-                        if(i[index] == ' '){
-                            let b = username.split(' ');
-                            document.cookie = `__sigla=${b[0].split('')[0]}`;
-                            break;
-                        }else{
-                            let b = username.split('');
-                            document.cookie = `__sigla=${b[0].split('')[0]}`;
-                        }
-                    }
+            //     if(data.succes){
+            //         //creating user sigla
+            //         let i = username.split('')
+            //         for (let index = 0; index < i.length; index++) {
+            //             if(i[index] == ' '){
+            //                 let b = username.split(' ');
+            //                 document.cookie = `__sigla=${b[0].split('')[0]}`;
+            //                 break;
+            //             }else{
+            //                 let b = username.split('');
+            //                 document.cookie = `__sigla=${b[0].split('')[0]}`;
+            //             }
+            //         }
 
-                    document.cookie = `__token=${data.token}`;
-                    document.cookie = `__username=${username}`;
+            //         document.cookie = `__token=${data.token}`;
+            //         document.cookie = `__username=${username}`;
 
-                    navigate('/dashboard')
-                }
-            })
-            .catch(err=>console.log(err))
+            //         navigate('/dashboard')
+            //     }
+            // })
+            // .catch(err=>console.log(err))
+            
+            navigate('/feed')
     }  
 
     return (
