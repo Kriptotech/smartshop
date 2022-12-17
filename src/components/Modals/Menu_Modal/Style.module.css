@@ -1,11 +1,12 @@
 .Menu_Modal {
     position: absolute;
-    top: 90px;
+    top: 75px;
     right: 5%;
     width: 300px;
     z-index: 10;
-    background: var(--action-tertiary);
+    background: #fff;
     border-radius: 5px;
+    box-shadow: 1px 1px 2px #666;
 }
 
 
@@ -19,7 +20,7 @@
 }
 .Menu_Modal .Menu_Modal_account_links a{
     text-decoration: none;
-    color: var(--foreground-secondary);
+    color: var(--violet);
     margin: 18px;
     font-size: .9rem;
     display: flex;
@@ -27,6 +28,7 @@
 }
 .Menu_Modal .Menu_Modal_account_links a:hover{
     color: var(--violet);
+    opacity: .8;
 }
 .Menu_Modal .Menu_Modal_account_links a svg{
     margin-right: 5px;
@@ -40,14 +42,15 @@
     font-size: .9rem;
     display: flex;
     align-items: center;
-    color: var(--foreground-secondary);
+    color: var(--violet);
 }
 .Menu_Modal .Menu_Modal_account_links span:hover{
     color: var(--violet);
+    opacity: .8;
 }
 
 
-@media (max-width: 500px){
+@media (max-width: 650px){
     .Menu_Modal {
         display: none;
     }

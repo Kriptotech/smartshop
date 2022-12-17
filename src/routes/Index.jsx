@@ -11,6 +11,8 @@ import { Login } from "../pages/Login";
 import { Storespage } from "../pages/Stores";
 import { Storepage } from "../pages/Store";
 import { Colectionspage } from "../pages/Colections";
+import { Profilepage } from "../pages/Profile";
+import { Downloadpage } from "../pages/Download";
 
 
 export function Router() { 
@@ -21,6 +23,8 @@ export function Router() {
             <div>
                 <BrowserRouter>
                     <Routes>
+                        <Route path="/download" element={<Downloadpage />} />
+                        <Route path="/profile" element={<Profilepage />} />
                         <Route path="/colections" element={<Colectionspage />} />
                         <Route path="/store" element={<Storepage />} />
                         <Route path="/stores" element={<Storespage />} />

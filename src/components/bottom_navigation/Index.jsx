@@ -24,7 +24,7 @@ export function BottomNavigation({route}) {
                 <TShirt color={route === "colections" ? "rgb(50, 170, 225)" : "#024E82"} weight='fill'/>
                 {route === 'colections' && <span>Coleções</span>}
             </button>
-            <button onClick={()=>navigateToPage('store')}>
+            <button onClick={()=>navigateToPage('profile')}>
                 <User color={route === "profile" ? "rgb(50, 170, 225)" : "#024E82"} weight='fill'/>
                 {route === 'profile' && <span>Perfil</span>}
             </button>

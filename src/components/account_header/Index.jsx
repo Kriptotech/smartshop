@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { List, User, XCircle } from "phosphor-react";
 
 import style from "./styles.module.css";
+import { MenuModal } from "../Modals/Menu_Modal/Index";
 
 export function AccountHeader() {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
+    const [isModalVisible, setIsModalVisible] = useState(false);
 
     return (
         <header className={style.main_header}>
@@ -20,7 +22,7 @@ export function AccountHeader() {
                 </div>
 
 
-                <div className={style.auth_links}>
+                <div className={style.auth_links} onClick={()=>setIsModalVisible(!isModalVisible)}>
                     <img src='/profile.png' alt='' width='40px'/>
                 </div>
 
@@ -32,7 +34,7 @@ export function AccountHeader() {
                         <a href="/feed">FEED</a>
                         <a href="/stores">LOJAS</a>
                         <a href="/colections">COLEÇÕES</a>
-                        <a href="#" className={style.auth_anchor}><User weight='fill'  color='rgba(157, 109, 235, 0.856)' size={20}/> Conta</a>
+                        <a href="profile" className={style.auth_anchor}><User weight='fill'  color='rgba(157, 109, 235, 0.856)' size={20}/> Conta</a>
                         
                         <button onClick={()=>setIsMenuVisible(false)}>
                             <XCircle color='white' weight='fill' size={35}/>
@@ -50,9 +52,9 @@ export function AccountHeader() {
                         <XCircle color='rgba(157, 109, 235, 1)' size={35}/>
                     </button>
                 }
-
-                
             </nav>
+
+            {isModalVisible && <MenuModal />}
         </header>
     );
 }

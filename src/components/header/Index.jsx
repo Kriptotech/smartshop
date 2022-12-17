@@ -18,6 +18,7 @@ export function Header() {
                     <a href="/">HOME</a>
                     <a href="/about">SOBRE NÓS</a>
                     <a href="/contact">CONTACTE-NOS</a>
+                    <a href="/download">APLICATIVO</a>
                 </div>
 
                 <div className={style.auth_links}>
@@ -30,6 +31,7 @@ export function Header() {
                         <a href="/">HOME</a>
                         <a href="/about">SOBRE NÓS</a>
                         <a href="/contact">CONTACTE-NOS</a>
+                        <a href="/download">APLICATIVO</a>
                         <a href="/signin" className={style.auth_anchor}><User color='rgba(157, 109, 235, 0.856)' size={20}/> ENTRAR</a>
                         <a href="/signup" className={style.auth_anchor}>CRIAR CONTA</a>
                     </div>
